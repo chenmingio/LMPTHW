@@ -6,6 +6,8 @@ def test_push():
     assert colors.count() == 1
     colors.push("Ultramarine Blue")
     assert colors.count() == 2
+    colors.push("Ultramarine Vilot")
+    assert colors.count() == 3
 
 def test_pop():
     colors = SLL()
@@ -95,11 +97,11 @@ def test_get():
 
 
     
-test_push()
-test_pop()
-test_get()
-test_unshift()
+# test_push()
+# test_pop()
+# test_get()
+# test_unshift()
 # test_shift()  # has problem with shift concept. Come back later when it's clear.
-test_remove()
-test_first()
-test_last()
+# test_remove()
+# test_first()
+# test_last()

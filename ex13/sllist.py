@@ -17,16 +17,35 @@ class SLL(object):
 
     def push(self, obj):
         '''Appends a new value on the end of the list.'''
-        old_begin = self.begin
-        self.begin = SLLNode(obj, old_begin)
+
+        if self.begin == None:
+        # if none element:
+            self.begin = self.end = SLLNode(obj, None)
+        else:
+            # at least one element
+            old_last_node = self.end
+            old_last_node.next = SLLNode(obj, None)
+            self.end = old_last_node.next
 
     def pop(self):
         '''Removes the last item and returns it.'''
-        if self.begin:
-            ex_begin = self.begin
-            self.begin = ex_begin.next
-            return ex_begin.value
-        else: 
+        if self.begin != self.end:
+            # at least two element
+            node = self.begin
+            while node.next.next != None:
+                node = node.next
+            print(">>> end", self.end.value, "node", node.value)
+            rc = node.next.value
+            node.next = None
+            self.end = node
+            return rc
+        elif self.begin == self.end and self.begin != None: 
+            # one element
+            rc = self.begin.value
+            self.begin = self.end = None
+            return rc
+        else:
+            # empty list
             return None
 
     def shift(self, obj):
