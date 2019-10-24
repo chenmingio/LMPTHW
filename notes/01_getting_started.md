@@ -1,6 +1,6 @@
 # 流程
 
-## 如何快速进入编程心流
+## 启动清单
 
 ### Zed的建议
 
@@ -15,17 +15,22 @@
 ## 自问自答
 
 * Do you have problems working on projects for long periods of time?
-  * yes
+  * yes.
+  * 培养持续输出的习惯
 * Do you tend to make defective code with no idea why?
   * yes. 常常因为没有全面思考
+  * 观察自己错误的类型
 * Do you chase programming languages but never actually implement anything?
   * 太对了
+  * 用Zed的建议，使用新语言完成小项目
 * Do you never remember APIs? (Yeah, me neither.)
   * 对。用IDE提醒。
+  * 常用的最好记一下
 * Do you feel inferior or like a fraud who will get caught?
   * 啥意思？
 * Do you worry whether you’re a “real programmer”?
   * 对
+  * 不用担心，反正我也不是
 * Do you have no idea how to take an idea and pop it out of your head into code?
   * 还行。用纸笔模拟模拟。
 * Do you have problems getting started?
@@ -36,8 +41,9 @@
   * 对。实现最初目标后会有较长的停滞。也没有系统debug的流程。
 * Do you keep piling code on top of code until there’s just a huge mess?
   * 对。不然要如何？
+  * 采用建议
 
-## 好的做法
+## tips
 
 
 ## 阻挡我的fiction
@@ -46,3 +52,4 @@
 * pylint（看下如何按需要enable）
 * 某种防御式/批评式心态（创造力的大忌！）
 * 逃避心态
+
