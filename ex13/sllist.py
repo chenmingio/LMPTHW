@@ -41,9 +41,8 @@ class SLL(object):
             return rc
         elif self.begin == self.end and self.begin != None: 
             # one element
-            rc = self.begin.value
             self.begin = self.end = None
-            return rc
+            return self.begin.value
         else:
             # empty list
             return None

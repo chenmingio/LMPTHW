@@ -2,15 +2,25 @@ from dllist import DoubleLinkedList
 
 def bubble_sort(numbers):
     """Sorts a list of numbers using bubble sort"""
-    number = numbers.begin
-    count = numbers.count()
-    for i in range(0, count):
-        if number.value > number.next.value:
-            temp = number.value
-            number.value = number.next.value
-            number.next.value = temp
-    return numbers
+    while True:
+        number = numbers.begin
+        count = numbers.count()
+        for i in range(0, count):
+            if number.value > number.next.value:
+                temp = number.value
+                number.value = number.next.value
+                number.next.value = temp
+        return numbers
 
+
+def count(node):
+    count = 0
+
+    while node:
+        node = node.next
+        count += 1
+
+    return count
 
 def merge_sort(numbers):
 # function merge_sort(list m)
@@ -32,7 +42,7 @@ def merge_sort(numbers):
     for i in range(0, count):
         print(">>> i=", i)
         rc = node.value
-        if i < int(count / 2):
+        if i < (count // 2):
             left_numbers.push(rc)
         # else
         # add x to right
@@ -76,3 +86,22 @@ def merge(left, right):
         rc.push(right.unshift())
     # return result
     return rc
+
+
+def quick_sort_wrapper(numbers):
+    low = 0
+    high = len(numbers)
+    return quick_sort(numbers, low, hight)
+    
+    
+# quickSort(arr[], low, high)
+def quick_sort(numbers, low, high):
+#     if (low < high)
+    if (low < high):
+#         /* pi is partitioning index, arr[pi] is now
+#            at right place */
+#         pi = partition(arr, low, high);
+        pi = partition(numbers, low, high)
+#         quickSort(arr, low, pi - 1);  // Before pi
+        quick_sort(arr)
+#         quickSort(arr, pi + 1, high); // After pi

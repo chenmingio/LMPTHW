@@ -6,7 +6,6 @@ def test_push():
     assert colors.count() == 1
     colors.push("Ultramarine Blue")
     assert colors.count() == 2
-    # print(colors.end)
     colors._invariant()
 
 def test_pop():
@@ -36,8 +35,6 @@ def test_shift():
     assert colors.count() == 1
 
     colors.shift("Carbazole Violet")
-    # print(colors.begin)
-    # print(colors.end)
     assert colors.count() == 2
 
     assert colors.pop() == "Cadmium Orange"
@@ -52,12 +49,21 @@ def test_remove():
     colors.push("Zinc White")
     colors.push("Nickle Yellow")
     colors.push("Perinone")
+    colors._invariant()
+    print("----1----")
     assert colors.remove("Cobalt") == 0
-    colors.dump("before perinon")
+    colors._invariant()
+    # colors.dump("before perinon")
+    print("----2----")
     assert colors.remove("Perinone") == 2
-    colors.dump("after perinon")
+    colors._invariant()
+    # colors.dump("after perinon")
+    print("----3----")
     assert colors.remove("Nickle Yellow") == 1
+    colors._invariant()
+    print("----4----")
     assert colors.remove("Zinc White") == 0
+    colors._invariant()
 
 
 def test_first():

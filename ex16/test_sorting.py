@@ -30,6 +30,9 @@ def test_merge_sort():
     out_list = sorting.merge_sort(random_list(max_number))
     return is_sorted(out_list)
 
+def test_quick_sort():
+    out_list = sorting.quick_sort(random_list(max_number))
+    return is_sorted(out_list)
 
 def test_is_sorted():
     test_numbers = DoubleLinkedList()
