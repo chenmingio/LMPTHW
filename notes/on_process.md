@@ -38,3 +38,19 @@ Zed的方法侧重记忆和理解的实践策略。名字是：“memorize, atte
    4. 回到资料间对比结果
    5. 放回电脑
    6. 回到资料间继续学习，重点关注之前的错误。
+
+## 结合test driven development的合理开发步骤
+
+1. quick hike/spike 30-45 mins
+2. prepare feature/TODO/plan list
+3. turn your feature list to unit test
+3.5 run the unit test to fail
+4. audit test and record bugs
+5. write code using your hack
+6. audit code and record bugs
+7. run unit test and record bugs
+8. run manually and record bugs
+9. try to break it
+10. loop around
+
+* 注意audit的步骤

@@ -2,7 +2,7 @@ import sorting
 from dllist import DoubleLinkedList
 from random import randint
 
-max_number = 30
+max_number = 100
 
 def random_dll_list(count):
     numbers = DoubleLinkedList()
@@ -45,8 +45,10 @@ def random_py_list(count):
     numbers = [randint(0, 100) for i in range(count, 0, -1)]
     return numbers
 
+
 def test_quick_sort():
-    numbers = random_py_list(max_number)
-    sorting.quick_sort(numbers, 0, max_number-1)
-    print("==final result==", numbers)
+    for i in range(0, 5000):
+        numbers = random_py_list(max_number)
+        sorting.quick_sort(numbers, 0, max_number-1)
+        # print("==final result==", numbers)
 
